@@ -1,0 +1,229 @@
+<!-- <div class="relative bg-white">
+  <div class="max-w-7xl mx-auto px-3 py-3 sm:px-6">
+    <div class="flex justify-between items-center md:justify-start md:space-x-10">
+      <div class="flex justify-start lg:w-0 lg:flex-1">
+        <a href="#">
+          <span class="sr-only">Workflow</span>
+          <img class="h-10 w-auto sm:h-10" src="./../assets/getir.png" alt="">
+        </a>
+      </div>
+    </div>
+  </div>
+
+</div>
+<div class="container mx-auto py-4">
+  <div class="flex flex-col">
+    <div class="-my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
+      <div class="py-2 align-middle inline-block min-w-full sm:px-6 lg:px-8">
+        <div class="shadow overflow-auto border-b border-gray-200 sm:rounded-lg" style="height: 500px;">
+          <table class="min-w-full divide-y divide-gray-200">
+            <thead class="bg-gray-50">
+              <tr>
+                <th scope="col"
+                  class="sticky-top">
+                  Product
+                </th>
+                <th scope="col"
+                  class="sticky-top">
+                  Shelf
+                </th>
+                <th scope="col" width="10%"
+                  class="sticky-top">
+                  Shelf Count
+                </th>
+                <th scope="col" width="10%"
+                  class="sticky-top">
+                  App Count
+                </th>
+                <th scope="col" *ngIf="isAdmin"
+                  class="sticky top-0 bg-gray-50 px-6 py-3 text-center text-xs font-medium text-gray-500 uppercase">
+                  admin action
+                </th>
+              </tr>
+            </thead>
+            <tbody class="bg-white divide-y divide-gray-200">
+              <tr *ngFor="let product of products">
+                <td class="px-6 py-4 whitespace-nowrap">
+                  <div class="flex items-center">
+                    <div class="flex-shrink-0 h-10 w-10">
+                      <img class="h-10 w-10 rounded-full" src="product.image" alt="">
+                    </div>
+                    <div class="ml-4">
+                      <div class="text-sm font-medium text-gray-900">
+                        {{product.product}}
+                      </div>
+                    </div>
+                  </div>
+                </td>
+                <td class="px-6 py-4 whitespace-nowrap">
+                  <div class="text-sm text-gray-900">{{product.shelf}}</div>
+                </td>
+                <td class="px-6 py-4 whitespace-nowrap">
+                  <span
+                    class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-green-100 text-green-800">
+                    {{product.storeCount}}
+                  </span>
+                </td>
+                <td class="px-4 py-4 whitespace-nowrap text-sm text-gray-500 ">
+                  <input type="text" name="appcount" id="count"
+                    class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                    id="username" [(ngModel)]="product.appCount">
+                </td>
+                <td *ngIf="isAdmin">
+                  <div class="flex justify-center">
+                    <span class="px-1">
+                      <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" viewBox="0 0 20 20" fill="currentColor">
+                        <path
+                          d="M2 10.5a1.5 1.5 0 113 0v6a1.5 1.5 0 01-3 0v-6zM6 10.333v5.43a2 2 0 001.106 1.79l.05.025A4 4 0 008.943 18h5.416a2 2 0 001.962-1.608l1.2-6A2 2 0 0015.56 8H12V4a2 2 0 00-2-2 1 1 0 00-1 1v.667a4 4 0 01-.8 2.4L6.8 7.933a4 4 0 00-.8 2.4z" />
+                      </svg>
+                    </span>
+                    <span class="mt-2 px-1">
+                      <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" viewBox="0 0 20 20" fill="currentColor">
+                        <path
+                          d="M18 9.5a1.5 1.5 0 11-3 0v-6a1.5 1.5 0 013 0v6zM14 9.667v-5.43a2 2 0 00-1.105-1.79l-.05-.025A4 4 0 0011.055 2H5.64a2 2 0 00-1.962 1.608l-1.2 6A2 2 0 004.44 12H8v4a2 2 0 002 2 1 1 0 001-1v-.667a4 4 0 01.8-2.4l1.4-1.866a4 4 0 00.8-2.4z" />
+                      </svg>
+                    </span>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="text-right px-6 py-2 whitespace-nowrap bg-violet-50	">
+        <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+          style="margin-right: 1rem;">
+          Submit
+        </button>
+      </div>
+    </div>
+  </div>
+
+</div> -->
+
+<div class="flex p-2 navbody text-center">
+  <span>
+    <img src="./../assets/getir1.png" alt="" width="50" height="40" class="d-inline-block align-text-top">
+  </span>
+</div>
+
+<div class="container-fluid px-4 py-1">
+  <div class="row">
+    <div class="col-md-12 scrollTable">
+      <table class="table table-responsive-xl">
+        <thead class="">
+          <tr>
+            <th scope="col" class="sticky-top">
+              Product
+            </th>
+            <th scope="col" class="sticky-top">
+              Shelf
+            </th>
+            <th scope="col" width="15%" class="sticky-top">
+              Shelf Count
+            </th>
+            <th scope="col" width="10%" class="sticky-top">
+              App Count
+            </th>
+            <th scope="col" *ngIf="isAdmin" class="sticky-top">
+              admin action
+            </th>
+          </tr>
+        </thead>
+        <tbody class="border-none">
+          <tr role="alert" *ngFor="let product of products; let i =index;">
+            <td class="d-flex align-items-center p-2">
+              <img src="./../assets/getir1.png" alt="" width="50" height="40" class="d-inline-block align-text-top">
+              <div class="pl-3">
+                <span class="ms-2"> {{product.product}}</span>
+              </div>
+            </td>
+            <td>{{product.shelf}}</td>
+            <td class="status"><span class="active"> {{product.storeCount}}</span></td>
+            <td>
+              <input type="text" name="appcount" id="count"
+                class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                id="username" [(ngModel)]="product.appCount">
+            </td>
+            <td *ngIf="isAdmin">
+              <div class="flex justify-center">
+                <span class="px-1 cursor" *ngIf="!product.actionStatus">
+                  <svg xmlns="http://www.w3.org/2000/svg" style="width:38px" viewBox="0 0 20 20" fill="currentColor"
+                    (click)="type='A';currentIndex = i" data-bs-toggle="modal" data-bs-target="#exampleModal2">
+                    <path
+                      d="M2 10.5a1.5 1.5 0 113 0v6a1.5 1.5 0 01-3 0v-6zM6 10.333v5.43a2 2 0 001.106 1.79l.05.025A4 4 0 008.943 18h5.416a2 2 0 001.962-1.608l1.2-6A2 2 0 0015.56 8H12V4a2 2 0 00-2-2 1 1 0 00-1 1v.667a4 4 0 01-.8 2.4L6.8 7.933a4 4 0 00-.8 2.4z" />
+                  </svg>
+                </span>
+                <span class="mt-2 px-1 cursor" *ngIf="!product.actionStatus">
+                  <svg (click)="type='D';currentIndex = i" data-bs-toggle="modal" data-bs-target="#exampleModal2"
+                    xmlns="http://www.w3.org/2000/svg" class="mt-2" style="width:38px" viewBox="0 0 20 20"
+                    fill="currentColor">
+                    <path
+                      d="M18 9.5a1.5 1.5 0 11-3 0v-6a1.5 1.5 0 013 0v6zM14 9.667v-5.43a2 2 0 00-1.105-1.79l-.05-.025A4 4 0 0011.055 2H5.64a2 2 0 00-1.962 1.608l-1.2 6A2 2 0 004.44 12H8v4a2 2 0 002 2 1 1 0 001-1v-.667a4 4 0 01.8-2.4l1.4-1.866a4 4 0 00.8-2.4z" />
+                  </svg>
+                </span>
+                <span *ngIf="product.actionStatus">
+                  <a class="tooltip "> Comment
+                    <div class="tooltiptext-right card card-inner p-15 text-left">
+                      <span class="font-cv font-weight-bold">{{product.explanation ? product.explanation: 'No
+                        comments'}}</span>
+                    </div>
+                  </a>
+                </span>
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+<div class="text-end px-4 py-2 whitespace-nowrap bg-violet-50	">
+  <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+    Submit
+  </button>
+</div>
+
+<div class="modal" tabindex="-1" id="exampleModal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Confirmation</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <p>Are you sure you want to submit?</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary" data-bs-dismiss="modal" (click)="isAdmin = true">Save
+          changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="modal" tabindex="-1" id="exampleModal2">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Explanation</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body" *ngIf="currentIndex > -1">
+        <div class="mb-3">
+          <label for="exampleFormControlTextarea1" name="test" class="form-label">Please add your explanation</label>
+          <textarea class="form-control" [(ngModel)]="products[currentIndex].explanation"
+            id="exampleFormControlTextarea1" rows="3"></textarea>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary" data-bs-dismiss="modal" (click)="saveChanges()">{{type === 'A' ?
+          'Approve' :
+          'Reject'}}</button>
+      </div>
+    </div>
+  </div>
+</div>
